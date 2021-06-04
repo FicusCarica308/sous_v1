@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 # installs mongoDB on a linux(ubuntu) system (xenial)
 # > installs mongoDB community server
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -

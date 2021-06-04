@@ -1,0 +1,19 @@
+{
+  "name": "sous",
+  "version": "1.0.0",
+  "description": "Dependencies for sous_v1 node application",
+  "main": "sous_app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FicusCarica308/sous_v1.git"
+  },
+  "author": "Manuel Enrique Figueroa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FicusCarica308/sous_v1/issues"
+  },
+  "homepage": "https://github.com/FicusCarica308/sous_v1#readme"
+}

@@ -4,7 +4,8 @@
   "description": "Dependencies for sous_v1 node application",
   "main": "sous_app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node sous_app.js",
+    "dev": "nodemon sous_app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/FicusCarica308/sous_v1/issues"
   },
-  "homepage": "https://github.com/FicusCarica308/sous_v1#readme"
+  "homepage": "https://github.com/FicusCarica308/sous_v1#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }

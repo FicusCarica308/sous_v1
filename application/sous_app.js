@@ -1,32 +1,60 @@
 /*requirments*/
+const http = require('http');
 const express = require('express');
+const bodyParser = require('body-parser');
+const favicon = require('serve-favicon');
+const path = require('path');
+const session = require('express-session')
 
-/* === (Pug and server setup) === */
-const server = express();
-server.set('view engine', 'pug');
-server.set('views', './page_content/views')
+/* === (Pug, server, and bodyParser setup) === */
+const sousApp = express();
+sousApp.set('view engine', 'pug');
+sousApp.set('views', './page_content/views');
+sousApp.use(bodyParser.urlencoded({ extended: true }));
+//sousApps favicon
+sousApp.use(favicon(path.join(__dirname, 'page_content/images', 'sous_logo.png')));
+//serves static folder
+sousApp.use(express.static(path.join(__dirname, 'page_content')));
+/*=================================================*/
 
 //URL routes
 //home route (where sign in will happen)
-server.get('/', (request, response) => {
-    response.render('home')
+sousApp.get('/', (req, res) => {
+    res.render('home')
+    console.log(req)
+});
+
+//user signin
+sousApp.post('/login', (req, res) => {
+    //check if user exists
+    console.log(req.body)
 });
 
 //food search route
-server.get('/food', (request, response) => {
-    response.send('<h1>food</h1>')
+sousApp.get('/food', (req, res) => {
+    res.send('<h1>food</h1>')
 });
 
 //recipes search
-server.get('/recipes', (request, response) => {
-    response.send('<h1>food</h1>')
+sousApp.get('/recipes', (req, res) => {
+    res.send('<h1>food</h1>')
 });
 
 //user recipes
-server.get('recipes/user')
+sousApp.get('recipes/user')
 
 //Setting port
 const PORT = process.env.PORT || 5000;
 
-//Server start (displays server start message)
-server.listen(PORT, () => console.log(`server started on port ${PORT}`));
+/* === Error Handles === */
+sousApp.use(function(req, res) {
+    res.send('404: Page not found', 404);
+});
+
+sousApp.use(function(error, req, res, next) {
+    res.send('500: Internal error', 500);
+})
+/*==================================================*/
+
+//sousApp start (displays sousApp start message)
+sousApp.listen(PORT, () => console.log(`sousApp started on port ${PORT}`));

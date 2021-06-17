@@ -2,19 +2,43 @@
     html(lang='en')
         head
             meta(charset="utf-8")
+            link(type='text/css' rel='stylesheet' href='../style_sheets/header.css')
+            script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+            script(type="text/javascript" src="../scripts/signin_alert.js")
             title='Home'
+            div(class=message id='Status')
         body
             header
-                form(action='/login' method="POST")
-                    input(type="text", name='username', placeholder="username")
-                    input(type="text", name='password', placeholder="password")
-                    button(type='submit')='submit'
+                if (message == "Still-Signed" || message == "Sign-In-True")
+                    div(id='login' class='credentials')
+                        h1='Welcome !'
+                else
+                    form(action='/login' method="POST" id='login' class='credentials')
+                        h2='Login:'
+                        input(type="text", name='username', placeholder="username")
+                        input(type="text", name='password', placeholder="password")
+                        button(type='submit')='submit'
+                <img src="/images/sous_home_banner2.png" id='ban_1' class='banner'>
                 nav
+                    form(action='/recipes' method='GET')
+                        button='Recipes'
+                    form(action='/user/recipes' method='GET')
+                        button='Your Recipes'
+                    <img src="/images/sous_logo.png" id='logo'>
                     form(action='/' method='GET')
                         button='Home'
                     form(action='/food' method='GET')
-                        button='Food'
-            div
-                // nothing right now
+                        button='Food Search'
+                <img src="/images/sous_home_banner2.png" id='ban_2' class='banner'>
+                if (message == "Still-Signed" || message == "Sign-In-True")
+                    div(id='signup' class='credentials')
+                        form(action='/logout' method='GET')
+                            button(type='submit')='logout'
+                else
+                    form(action='/signup' method="POST" id='signup' class='credentials')
+                        h2='Signup:'
+                        input(type="text", name='username', placeholder="username")
+                        input(type="text", name='password', placeholder="password")
+                        button(type='submit')='submit'
             footer
                 <img src="/images/sous_logo.png">

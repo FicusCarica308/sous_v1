@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    html(lang='en')
+        head
+            meta(charset="utf-8")
+            script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+            script(type="text/javascript" src="../scripts/results_alert.js")
+            link(type='text/css' rel='stylesheet' href='../style_sheets/search_recipes_body.css')
+            link(type='text/css' rel='stylesheet' href='../style_sheets/search_recipes_header.css')
+            link(type='text/css' rel='stylesheet' href='../style_sheets/header.css')
+            title='Home'
+            div(class=message id='Status')
+        body
+            header
+                div(id='headerMessage')
+                    h1='Search!'
+                <img src="/images/sous_home_banner2.png" id='ban_1' class='banner'>
+                nav
+                    form(action='/recipes' method='GET')
+                        button='Recipes'
+                    form(action='/user/recipes' method='GET')
+                        button='Your Recipes'
+                    <img src="/images/sous_logo.png" id='logo'>
+                    form(action='/' method='GET')
+                        button='Home'
+                    form(action='/food' method='GET')
+                        button='Food Search'
+                <img src="/images/sous_home_banner2.png" id='ban_2' class='banner'>
+                div(id='signup' class='credentials')
+                    form(action='/logout' method='GET')
+                        button(type='submit')='logout'
+            // Body of webpage
+            div(id='recipeSearch')
+                    form(action='/recipes/query' method='POST')
+                        input(type="text", name='recipe_query', placeholder="Search")
+                        input(type="number", name='budget', placeholder="Budget", step='0.01')
+                        input(type="number", name='total_results', placeholder="Results per page")
+                        button(type='submit')='Submit'
+            <div class="placesh1"><h1>Recipes</h1></div>
+            section(class="recipes")
+                if results.length > 0
+                    each recipe in results
+                        if recipe.pricePerServing <= budget || budget == 'null'
+                            // Per Recipe Display
+                            article
+                                div(class='recipe')
+                                    h1=recipe.title
+                                    img(src=recipe.image)
+                                    a(href=recipe.spoonacularSourceUrl target="_blank")='Click For Recipe Details'
+                                    h1='$' + recipe.pricePerServing
+                                    form(action='/recipes/save/'+ recipe.id, method='GET')
+                                        h3(id='savedStatus')='Not Saved'
+                                        button(type='submit' id='saveBtn')='Save Recipe'
+                else
+                    h1="This is where recipes will be displayed"
+
+
+            footer
+                <img src="/images/sous_logo.png">

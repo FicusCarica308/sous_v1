@@ -1,0 +1,42 @@
+.landingPageContent {
+    background: white;
+    height: 130px;
+    width: 100%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#introduction {
+    text-align: center;
+}
+.feature1 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+}
+.feature1 #searchBoxTutorial{
+    text-align: center;
+}
+.feature1 #spoonicular{
+    text-align: center;
+}
+.feature1 #recipeSave {
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    height: 500px;
+    width: 500px;
+}
+#about div{
+    border-bottom: 1px solid red;
+}
+#github {
+    padding-right: 100px;
+}
+.gifArrow {
+    text-align: center;
+    width:100px;
+    height:100px;
+}

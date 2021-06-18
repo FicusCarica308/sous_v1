@@ -3,6 +3,8 @@
         head
             meta(charset="utf-8")
             link(type='text/css' rel='stylesheet' href='../style_sheets/header.css')
+            link(type='text/css' rel='stylesheet' href='../style_sheets/foot.css')
+            link(type='text/css' rel='stylesheet' href='../style_sheets/home_body.css')
             script(src="https://code.jquery.com/jquery-3.2.1.min.js")
             script(type="text/javascript" src="../scripts/signin_alert.js")
             title='Home'
@@ -41,4 +43,52 @@
                         input(type="text", name='password', placeholder="password")
                         button(type='submit')='submit'
             footer
-                <img src="/images/sous_logo.png">
+                div
+                    h3='MyGithub:'
+                    a(href="https://github.com/FicusCarica308" target="_blank")
+                        <img src="https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png" alt="MyGithub" id='github'>
+                div
+                    h3='Hosted on heroku:'
+                    a(href="https://www.heroku.com/" target="_blank")
+                        <img src="https://www.hackathon-stuttgart.de/wordpress/wp-content/uploads/2017/10/Heroku_logo_white.png" alt="Heroku" id='Heroku'>
+                div
+                    h3='Created by This guy right here =>'
+                    <img src="https://avatars.githubusercontent.com/u/63696144?s=400&u=c2402fb3eea5da225839143af56ec07f6497b80e&v=4" alt="ME" id='author'>
+
+            div(class='landingPageContent')
+                div(id='introduction')
+                    h1='Introducing...'
+                    img(src='/images/sous_logo.png' id='introLogo')
+                    h2='The second in command in your kitchen...'
+                    img(src='https://gifimage.net/wp-content/uploads/2017/07/flechas-gif-7.gif' class='gifArrow')
+                div(class='feature1')
+                    div(id='spoonicular')
+                        h1='Searching for Recipes!'
+                        p='Sous has a built in recipe search engine using spoonicular API'
+                        a(href="https://spoonacular.com/food-api/" target="_blank")
+                            <img src="https://th.bing.com/th/id/OIP.OU2L0E0TLiMYVE4pmJPKngAAAA?pid=ImgDet&rs=1" alt="Spoonicular" id='Spoonicular'>
+                    div(id='searchBoxTutorial')
+                        <img src="/images/sous_recipe_search.png" alt="recipeTutorial" id='recipeSearchbox'>
+                        h3='One the recipes page you can use this searchbox to display recipes by budget and name!'
+                        h3='You can also choose how many recipes you would like to display'
+                        img(src='https://gifimage.net/wp-content/uploads/2017/07/flechas-gif-7.gif' class='gifArrow')
+                    div(id='saveRecipeTutorial')
+                        <img src="/images/sous_recipe_save.png" alt="recipeSave" id='recipeSave'>
+                        h3='Now once a recipe is displayed you can click save and view it later'
+                div(id='finale')
+                    h1='Now you can view them at the Your Recipes page !'
+                    img(src='/images/delete_recipe.PNG' id='introLogo')
+                    h1='You may also delete recipes connected to you user using this button'
+                    img(src='https://gifimage.net/wp-content/uploads/2017/07/flechas-gif-7.gif' class='gifArrow')
+                div(id='about')
+                    h1='About:'
+                    h3='So what inspired me ?'
+                    p='Right now I have a person that is very close to me that loves to cook'
+                    p='but is no longer able to very often since her financial situation is tight'
+                    p='I designed this app to help people like her living on a budget save friendly recipes'
+                    div
+                        h1='Here is a link to this projects repository:'
+                        a(href="https://github.com/FicusCarica308/sous_v1" target="_blank")
+                            <img src="https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png" alt="MyGithub" id='github'>
+
+

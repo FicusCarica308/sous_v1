@@ -157,7 +157,7 @@ sousApp.get('/', (req, res) => {
 
 //food search route
 sousApp.get('/food', (req, res) => {
-    res.send('<h1>food</h1>')
+    res.send('<h1>Not Implemented yet GO BACK !!!</h1>')
 });
 
 //recipes search

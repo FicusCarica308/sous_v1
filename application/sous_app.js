@@ -17,7 +17,7 @@ MongoDB Connection:
 and connects application to external database...
 */
 const config = require('./sous_config');
-mongoose.connect(config.mongoURI)
+mongoose.connect(config.mongoURI, { useNewUrlParser: true })
     .then(() => console.log('MongoDB Connection Success:', config.mongoURI))
     .catch(error => console.error('MongoDB Connection Failure', err));
 //=========================================================================

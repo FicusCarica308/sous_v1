@@ -8,23 +8,20 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const User = require('./models/user');
 const getRecipes = require("./helpers/get_recipes");
-const user = require('./models/user');
-const config = require('./sous_config');
 
 let searchCache = [];
-/* database mongoose connection */
-const mongoURL = config.mongoURL;
 
-mongoose.connect(mongoURL, { useNewUrlParser: true })
+/*
+MongoDB Connection:
+    Uses sous_config.js (imported as config) to get mongoURI
+and connects application to external database...
+*/
+const config = require('./sous_config');
+mongoose.connect(config.mongoURI)
+    .then(() => console.log('MongoDB Connection Success:', config.mongoURI))
+    .catch(error => console.error('MongoDB Connection Failure', err));
+//=========================================================================
 
-const db = mongoose.connection
-db.once('open', _ => {
-  console.log('Database connected:', mongoURL)
-});
-
-db.on('error', err => {
-  console.error('connection error:', err)
-});
 
 /* === (Pug, server, and bodyParser setup) === */
 const sousApp = express();
@@ -36,7 +33,7 @@ sousApp.use(favicon(path.join(__dirname, 'page_content/images', 'sous_logo.png')
 //serves static folder
 sousApp.use(express.static(path.join(__dirname, 'page_content')));
 sousApp.use(session({
-    secret: 'secret-key',
+    secret: 'dev-key-34968A',
     resave: false,
     saveUninitialized: true,
     cookie:{maxAge: 1000000}
@@ -110,7 +107,7 @@ sousApp.post('/signup', (req, res) => {
 
     newUser.save()
         .then((document) => {
-            console.log(document)
+            console.log(document);
             req.session.user = document;
             res.render('home', {message: 'Sign-In-True'});
         })

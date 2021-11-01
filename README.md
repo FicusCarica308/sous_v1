@@ -40,3 +40,8 @@ Manuel Enrique Figueroa - [Github](https://github.com/FicusCarica308), [LinkedIn
 
 ## License
 Public Domain. No copy write protection.
+
+#### Product Previews:
+![sous_logo](https://raw.githubusercontent.com/FicusCarica308/sous_v1/master/application/page_content/images/delete_recipe.PNG)
+![sous_logo](https://raw.githubusercontent.com/FicusCarica308/sous_v1/master/application/page_content/images/sous_recipe_save.png)
+![sous_logo](https://raw.githubusercontent.com/FicusCarica308/sous_v1/master/application/page_content/images/sous_recipe_search.png)

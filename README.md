@@ -16,14 +16,20 @@ Sous_v1 is a full we application made as a portfolio project using technologies 
 * (mongoDB + linux-server) - I hosted my own configured noSQL database on a external linux server which I then accessed using mongoose in my application.
 * (PUG + CSS) - I then used PUG to create a simple front-end to show off my back-end functionalities.
 
-#### API:
+#### API's / Other:
 * For this project I used Spoonicular web API to find and store recipes.
 * https://spoonacular.com/
+* I hosted my project using heroku
+* https://www.heroku.com/
 
 ## Learning Objectives:
 * Learn how to create an express.js application in node.js
 * Explore creating a dynamic loading front end.
 * Learn how to make real-world API calls
+* Learn how to create an npm project
+* Learn how to use node.js runtime environment
+* Practice creating basic CSS3 and HTML5 layouts
+* Learn how to use mongoDB / Host it securely on a remote server
 
 ## Bugs
 * Currently not running (server was deleted)

@@ -34,6 +34,7 @@ Sous_v1 is a full we application made as a portfolio project using technologies 
 
 ## Bugs
 * Currently not running (server was deleted)
+* Cannot use basic recipe search since user cannot sign in
 
 ## Authors
 Manuel Enrique Figueroa - [Github](https://github.com/FicusCarica308), [LinkedIn](https://www.linkedin.com/in/manuel-figueroa-292216215)
@@ -42,7 +43,7 @@ Manuel Enrique Figueroa - [Github](https://github.com/FicusCarica308), [LinkedIn
 Public Domain. No copy write protection.
 
 #### Product Previews:
-https://limitless-sands-78800.herokuapp.com/
+https://limitless-sands-78800.herokuapp.com/ - cannot access recipe search because of database failure
 ![sous_logo](https://raw.githubusercontent.com/FicusCarica308/sous_v1/master/application/page_content/images/delete_recipe.PNG)
 ![sous_logo](https://raw.githubusercontent.com/FicusCarica308/sous_v1/master/application/page_content/images/sous_recipe_save.png)
 ![sous_logo](https://raw.githubusercontent.com/FicusCarica308/sous_v1/master/application/page_content/images/sous_recipe_search.png)

@@ -1,3 +1,4 @@
+![sous_logo](https://raw.githubusercontent.com/FicusCarica308/sous_v1/master/application/page_content/images/sous_logo.png)
 # Sous_v1:
 Sous_v1 is a full we application made as a portfolio project using technologies such as
 * Express.js

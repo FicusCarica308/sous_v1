@@ -6,18 +6,30 @@ Sous_v1 is a full we application made as a portfolio project using technologies 
 * Node.js
 
 ## Functionality:
+* Sous allows a user to sign into a user generated account from data stored on a external mongoDB server
+* The user is able to search for recipes using a search bar
+* The user can then store the recipes they want to their account
+* The user may access these recipes and delete them from the website
+
+### Technologies:
+* Express.js - I used express.js as my backend framework (I wanted to create a full javascript web application)
+* (mongoDB + linux-server) - I hosted my own configured noSQL database on a external linux server which I then accessed using mongoose in my application.
+* (PUG + CSS) - I then used PUG to create a simple backend to show off my backend functionalities.
+
+#### API:
+* For this project I used Spoonicular web API to find and store recipes.
+* https://spoonacular.com/
 
 ## Learning Objectives:
-* In this project I am learning how to use express.js 
-
-#### Functionalities:
-* TBD
+* Learn how to create an express.js application in node.js
+* Explore creating a dynamic loading front end.
+* Learn how to make real-world API calls
 
 ## Bugs
 * Currently not running (server was deleted)
 
 ## Authors
-Manuel Enrique Figueroa - [Github](https://github.com/FicusCarica308)
+Manuel Enrique Figueroa - [Github](https://github.com/FicusCarica308), [LinkedIn](https://www.linkedin.com/in/manuel-figueroa-292216215)
 
 ## License
 Public Domain. No copy write protection.

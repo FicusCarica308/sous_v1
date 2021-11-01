@@ -14,7 +14,7 @@ Sous_v1 is a full we application made as a portfolio project using technologies 
 ### Technologies:
 * Express.js - I used express.js as my backend framework (I wanted to create a full javascript web application)
 * (mongoDB + linux-server) - I hosted my own configured noSQL database on a external linux server which I then accessed using mongoose in my application.
-* (PUG + CSS) - I then used PUG to create a simple backend to show off my backend functionalities.
+* (PUG + CSS) - I then used PUG to create a simple front-end to show off my back-end functionalities.
 
 #### API:
 * For this project I used Spoonicular web API to find and store recipes.
